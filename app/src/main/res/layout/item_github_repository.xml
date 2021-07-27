@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewOwnerLogin"
+            style="@style/textViewH2ConstrainedWidth"
+            android:layout_width="0dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@id/textViewProjectName"
+            app:layout_constraintEnd_toStartOf="@id/imageViewAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="NikitaFerelin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewProjectName"
+            style="@style/textViewH2ConstrainedWidth"
+            android:layout_width="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/imageViewAvatar"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewOwnerLogin"
+            tools:text="Android_Stock_Price" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/textViewProjectName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textViewOwnerLogin"
+            app:shapeAppearanceOverlay="@style/shapeImageView"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewDescription"
+            style="@style/textViewH3ConstrainedWidthShadowed"
+            android:layout_marginTop="8dp"
+            android:lines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewProjectName"
+            tools:text="Description DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="textViewDescription, textViewProjectName" />
+
+        <ImageView
+            android:id="@+id/imageViewStar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/descriptionIconStar"
+            android:src="@drawable/ic_star_active"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierDescription"
+            app:layout_constraintVertical_bias="100" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewStarsCount"
+            style="@style/textViewH2ConstrainedWidth"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewStar"
+            app:layout_constraintStart_toEndOf="@id/imageViewStar"
+            app:layout_constraintTop_toTopOf="@id/imageViewStar"
+            tools:text="18" />
+
+        <ImageView
+            android:id="@+id/imageViewDownload"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/descriptionDownloadRepository"
+            android:src="@drawable/outline_download_black_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageViewAvatar"
+            app:layout_constraintStart_toStartOf="@id/imageViewAvatar"
+            app:layout_constraintTop_toBottomOf="@id/barrierDescription"
+            app:layout_constraintVertical_bias="100" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewOpenInBrowser"
+            style="@style/textViewH3ConstrainedWidth"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/hintOpenInBrowser"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewStar"
+            app:layout_constraintEnd_toStartOf="@id/textViewStarsCount"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/textViewStarsCount"
+            app:layout_constraintTop_toTopOf="@id/imageViewStar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

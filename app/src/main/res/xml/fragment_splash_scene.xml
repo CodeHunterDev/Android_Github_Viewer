@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/imageViewIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/textViewGithub"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toTopOf="@id/textViewViewer"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imageViewIcon" />
+
+        <Constraint
+            android:id="@id/textViewViewer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/imageViewIcon"
+            app:layout_constraintTop_toBottomOf="@id/textViewGithub" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/imageViewIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/textViewGithub"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toTopOf="@id/textViewViewer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/imageViewIcon"
+            app:layout_constraintTop_toTopOf="@id/imageViewIcon" />
+
+        <Constraint
+            android:id="@id/textViewViewer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/imageViewIcon"
+            app:layout_constraintTop_toBottomOf="@id/textViewGithub" />
+
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1200">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:scaleX="1"
+                app:framePosition="50"
+                app:motionTarget="@id/imageViewIcon" />
+
+            <KeyAttribute
+                android:scaleY="1"
+                app:framePosition="50"
+                app:motionTarget="@id/imageViewIcon" />
+
+            <KeyAttribute
+                android:alpha="0.3"
+                app:framePosition="50"
+                app:motionTarget="@id/textViewGithub" />
+
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="70"
+                app:motionTarget="@id/textViewGithub" />
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="90"
+                app:motionTarget="@id/textViewViewer" />
+
+        </KeyFrameSet>
+
+    </Transition>
+
+</MotionScene>

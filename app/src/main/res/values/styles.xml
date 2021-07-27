@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base text views-->
+    <style name="textView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/w_600</item>
+    </style>
+
+    <style name="textViewH1" parent="textView">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/w_700</item>
+    </style>
+
+    <style name="textViewH2" parent="textView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/w_700</item>
+    </style>
+
+    <style name="textViewH3" parent="textView">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Constrained width text views -->
+    <style name="textViewH3ConstrainedWidth" parent="textViewH3">
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="textViewH2ConstrainedWidth" parent="textViewH2">
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- Shadowed text views -->
+    <style name="textViewH1Shadowed" parent="textView">
+        <item name="android:textSize">28sp</item>
+        <item name="fontFamily">@font/w_700</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="textViewH2Shadowed" parent="textView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/w_700</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="textViewH3Shadowed" parent="textView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="textViewH3ConstrainedWidthShadowed" parent="textViewH3ConstrainedWidth">
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- Other -->
+    <style name="progressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:indeterminate">true</item>
+        <item name="trackColor">@color/black</item>
+    </style>
+
+    <style name="fab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:backgroundTint">@color/whiteDark</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:src">@drawable/outline_arrow_upward_black_24</item>
+        <item name="layout_behavior">.utils.FabBehaviourScrollable</item>
+        <item name="tint">@color/black</item>
+    </style>
+
+    <style name="editText" parent="textViewH3">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:imeOptions">flagNoFullscreen</item>
+        <item name="android:inputType">text</item>
+        <item name="android:lines">1</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textCursorDrawable">@drawable/edit_text_cursor</item>
+    </style>
+
+    <style name="cardSearch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">14dp</item>
+        <item name="android:transitionName">card</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">40dp</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="collapsingToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="layout_scrollFlags">scroll|snap</item>
+    </style>
+
+    <style name="shapeImageView">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="recyclerViewRepositories">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingBottom">70dp</item>
+        <item name="fastScrollEnabled">true</item>
+        <item name="fastScrollHorizontalThumbDrawable">@drawable/scroller_drawable</item>
+        <item name="fastScrollHorizontalTrackDrawable">@drawable/scroller_line_drawable</item>
+        <item name="fastScrollVerticalThumbDrawable">@drawable/scroller_drawable</item>
+        <item name="fastScrollVerticalTrackDrawable">@drawable/scroller_line_drawable</item>
+        <item name="layoutManager">androidx.recyclerview.widget.LinearLayoutManager</item>
+    </style>
+
+    <style name="circularProgressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">200dp</item>
+        <item name="android:indeterminate">true</item>
+        <item name="trackColor">@color/black</item>
+    </style>
+
+</resources>

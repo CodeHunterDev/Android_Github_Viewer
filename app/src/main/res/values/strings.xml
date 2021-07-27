@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">GitHubViewer</string>
+
+    <!-- Notifications -->
+    <string name="notificationDownloadFinished">Repository download finished</string>
+    <string name="notificationDownloadStarted">Repository download started</string>
+    <string name="notificationDownloadFailed">Repository download failed</string>
+    <string name="notificationUnknownHost">Network not found</string>
+    <string name="notificationAlreadyDownloaded">Repository already downloaded</string>
+    <string name="notificationFileCacheFailed">Repository save to disk failed</string>
+    <string name="notificationPathNotSelected">Path not selected</string>
+    <string name="notificationNotFoundActivity">No application found to open browser</string>
+
+    <!-- Content Descriptions -->
+    <string name="descriptionBack">Return back</string>
+    <string name="descriptionScrollToTop">Scroll to top</string>
+    <string name="descriptionSearchRepositories">Search repositories</string>
+    <string name="descriptionFolder">Open downloads</string>
+    <string name="descriptionAppIcon">Application icon</string>
+    <string name="descriptionIconStar">Stars counter</string>
+    <string name="descriptionDownloadRepository">Download repository</string>
+
+    <!-- Titles -->
+    <string name="titleDownloads">Downloads</string>
+    <string name="titleSearchRepositoryByLogin">Search repository by user login</string>
+    <string name="titleGithub">GitHub</string>
+    <string name="titleViewer">Viewer</string>
+
+    <!-- Hints -->
+    <string name="hintEnterUserLogin">Enter user login</string>
+    <string name="hintEmptyList">Empty list</string>
+    <string name="hintOpenInBrowser">Open in browser</string>
+
+</resources>

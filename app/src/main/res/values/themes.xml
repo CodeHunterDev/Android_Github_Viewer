@@ -1,0 +1,17 @@
+<resources>
+    <style name="Theme.GitHubViewer" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/blueLight</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:fontFamily">@font/w_600</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+</resources>

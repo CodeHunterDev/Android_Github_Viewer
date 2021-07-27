@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_splash_scene"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/descriptionAppIcon"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:src="@drawable/ic_github"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewGithub"
+        style="@style/textViewH1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="@string/titleGithub"
+        app:layout_constraintBottom_toTopOf="@id/textViewViewer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/imageViewIcon"
+        app:layout_constraintTop_toTopOf="@id/imageViewIcon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewViewer"
+        style="@style/textViewH1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:gravity="top"
+        android:text="@string/titleViewer"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/imageViewIcon"
+        app:layout_constraintTop_toBottomOf="@id/textViewGithub" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
