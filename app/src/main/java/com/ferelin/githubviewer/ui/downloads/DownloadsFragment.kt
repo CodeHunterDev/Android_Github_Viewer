@@ -65,6 +65,7 @@ class DownloadsFragment : Fragment(), GithubRepositoryClickListener {
 
     override fun onDestroyView() {
         AnimationsRunner.invalidateAnimations(sAnimationKey)
+        mBinding?.recyclerViewDownloads?.adapter = null
         mBinding = null
         super.onDestroyView()
     }

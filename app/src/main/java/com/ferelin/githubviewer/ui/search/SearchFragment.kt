@@ -86,6 +86,7 @@ class SearchFragment : Fragment(), GithubRepositoryClickListener {
 
     override fun onDestroyView() {
         AnimationsRunner.invalidateAnimations(sAnimationsKey)
+        mBinding?.recyclerViewRepositories?.adapter = null
         mBinding = null
         super.onDestroyView()
     }
